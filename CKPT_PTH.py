@@ -1,4 +1,7 @@
-LLAVA_CLIP_PATH = '/opt/data/private/AIGC_pretrain/LLaVA1.5/clip-vit-large-patch14-336'
-LLAVA_MODEL_PATH = '/opt/data/private/AIGC_pretrain/LLaVA1.5/llava-v1.5-13b'
-SDXL_CLIP1_PATH = '/opt/data/private/AIGC_pretrain/clip-vit-large-patch14'
-SDXL_CLIP2_CKPT_PTH = '/opt/data/private/AIGC_pretrain/CLIP-ViT-bigG-14-laion2B-39B-b160k/open_clip_pytorch_model.bin'
+# Route CLIPs through HuggingFace cache
+SDXL_CLIP1_PATH = 'openai/clip-vit-large-patch14'
+SDXL_CLIP2_CKPT_PTH = 'laion/CLIP-ViT-bigG-14-laion2B-39B-b160k'
+
+# Point directly to where our Docker image will download the safetensors
+SUPIR_ckpt_F_path = '/root/models/SUPIR/SUPIR-v0F_fp16.safetensors'
+SUPIR_ckpt_Q_path = '/root/models/SUPIR/SUPIR-v0Q_fp16.safetensors'
